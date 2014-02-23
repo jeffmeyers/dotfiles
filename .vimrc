@@ -28,11 +28,13 @@ set novisualbell
 set noerrorbells  
 set laststatus=2  
 
-execute pathogen#infect()
+set mouse=a
 
-syntax enable
-colorscheme solarized 
+execute pathogen#infect()
 
 map <Tab> :NERDTreeToggle<CR>
 map <C-h> :tabp<CR>
 map <C-l> :tabn<CR>
+
+syntax enable
+colorscheme solarized

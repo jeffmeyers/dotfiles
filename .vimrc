@@ -37,4 +37,6 @@ map <C-h> :tabp<CR>
 map <C-l> :tabn<CR>
 
 syntax enable
-colorscheme solarized
+"colorscheme solarized
+
+set showtabline=2

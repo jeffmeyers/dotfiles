@@ -35,6 +35,8 @@ execute pathogen#infect()
 map <Tab> :NERDTreeToggle<CR>
 map <C-h> :tabp<CR>
 map <C-l> :tabn<CR>
+map <C-i> :!rspec spec/<CR>
+map <C-c> :!cucumber features/<CR>
 
 syntax enable
 "colorscheme solarized

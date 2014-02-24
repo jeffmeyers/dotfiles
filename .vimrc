@@ -41,6 +41,6 @@ map <C-t> :tabnew<CR>
 map <C-x> :q<CR>
 
 syntax enable
-"colorscheme solarized
+colorscheme grb256
 
 set showtabline=2

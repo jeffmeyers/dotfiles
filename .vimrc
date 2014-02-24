@@ -27,16 +27,18 @@ set mat=5
 set novisualbell  
 set noerrorbells  
 set laststatus=2  
-
+set statusline=%t\ %y\ %P\ %{fugitive#statusline()}
 set mouse=a
 
 execute pathogen#infect()
 
-map <Tab> :NERDTreeToggle<CR>
 map <C-h> :tabp<CR>
 map <C-l> :tabn<CR>
-map <C-i> :!rspec spec/<CR>
+map <C-\> :!rspec spec/<CR>
 map <C-c> :!cucumber features/<CR>
+map <Tab> :NERDTreeToggle<CR>
+map <C-t> :tabnew<CR>
+map <C-x> :q<CR>
 
 syntax enable
 "colorscheme solarized

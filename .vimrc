@@ -27,8 +27,9 @@ set mat=5
 set novisualbell  
 set noerrorbells  
 set laststatus=2  
-set statusline=%t\ %y\ %P\ %{fugitive#statusline()}
+set statusline=%-10.3n\ %t\ %y\ %P\ %{fugitive#statusline()} 
 set mouse=a
+set hlsearch
 
 execute pathogen#infect()
 
@@ -40,7 +41,18 @@ map <Tab> :NERDTreeToggle<CR>
 map <C-t> :tabnew<CR>
 map <C-x> :q<CR>
 
+" buffers
+map <F8> :buffers<CR>
+
+map <F1> :b1<CR>
+map <F2> :b2<CR>
+map <F3> :b3<CR>
+map <F4> :b4<CR>
+map <F5> :b5<CR>
+map <F6> :b6<CR>
+map <F7> :b7<CR>
+
 syntax enable
-colorscheme grb256
+"colorscheme ir_black
 
 set showtabline=2

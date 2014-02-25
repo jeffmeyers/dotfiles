@@ -51,8 +51,16 @@ map <F4> :b4<CR>
 map <F5> :b5<CR>
 map <F6> :b6<CR>
 map <F7> :b7<CR>
+map <S-h> :bprev<CR>
+map <S-l> :bnext<CR>
 
 syntax enable
 "colorscheme ir_black
 
 set showtabline=2
+
+set cursorline
+hi CursorLine ctermbg=black
+
+hi StatusLine ctermbg=green ctermfg=black
+hi StatusLineNC ctermbg=black

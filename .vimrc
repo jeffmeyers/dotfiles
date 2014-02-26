@@ -33,26 +33,13 @@ set hlsearch
 
 execute pathogen#infect()
 
-map <C-h> :tabp<CR>
-map <C-l> :tabn<CR>
+map <C-S-h> :tabp<CR>
+map <C-S-h> :tabn<CR>
 map <C-\> :!rspec spec/<CR>
 map <C-c> :!cucumber features/<CR>
 map <Tab> :NERDTreeToggle<CR>
 map <C-t> :tabnew<CR>
 map <C-x> :q<CR>
-
-" buffers
-map <F8> :buffers<CR>
-
-map <F1> :b1<CR>
-map <F2> :b2<CR>
-map <F3> :b3<CR>
-map <F4> :b4<CR>
-map <F5> :b5<CR>
-map <F6> :b6<CR>
-map <F7> :b7<CR>
-map <S-h> :bprev<CR>
-map <S-l> :bnext<CR>
 
 syntax enable
 "colorscheme ir_black
@@ -60,7 +47,3 @@ syntax enable
 set showtabline=2
 
 set cursorline
-hi CursorLine ctermbg=black
-
-hi StatusLine ctermbg=green ctermfg=black
-hi StatusLineNC ctermbg=black

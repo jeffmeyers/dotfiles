@@ -33,11 +33,12 @@ set hlsearch
 
 execute pathogen#infect()
 
-map <C-S-h> :tabp<CR>
-map <C-S-h> :tabn<CR>
-map <C-\> :!rspec spec/<CR>
-map <C-c> :!cucumber features/<CR>
+" NERDTree mappings
 map <Tab> :NERDTreeToggle<CR>
+
+" tab mappings
+map <C-j> :tabp<CR>
+map <C-k> :tabn<CR>
 map <C-t> :tabnew<CR>
 map <C-x> :q<CR>
 
@@ -47,3 +48,11 @@ syntax enable
 set showtabline=2
 
 set cursorline
+
+hi StatusLine ctermbg=green ctermfg=black
+hi StatusLineNC ctermbg=black
+
+" backup
+set backupdir=~/tmp
+set swapfile
+set dir=~/tmp

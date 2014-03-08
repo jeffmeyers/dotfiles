@@ -41,18 +41,30 @@ map <C-j> :tabp<CR>
 map <C-k> :tabn<CR>
 map <C-t> :tabnew<CR>
 map <C-x> :q<CR>
+map <C-\> :vimgrep <cword> **/*.rb **/*.coffee **/*.feature <CR> :cwindow <CR>
 
 syntax enable
-"colorscheme ir_black
+colorscheme ron
+"set background=dark
 
 set showtabline=2
 
-set cursorline
+"set cursorline
 
-hi StatusLine ctermbg=green ctermfg=black
+hi StatusLine ctermbg=white ctermfg=black
 hi StatusLineNC ctermbg=black
 
 " backup
 set backupdir=~/tmp
 set swapfile
 set dir=~/tmp
+
+let mapleader=","
+
+filetype plugin on
+
+" open quickbuf results in a new tab
+set switchbuf+=newtab
+
+map <C-u> :m+<CR>==
+map <C-e> :m-2<CR>==

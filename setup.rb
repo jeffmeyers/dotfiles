@@ -73,3 +73,8 @@ log 'Installing SMYCK color theme...'
 `wget https://raw.githubusercontent.com/hukl/Smyck-Color-Scheme/master/smyck.vim -O ~/.vim/colors/smyck.vim`
 `wget https://raw.githubusercontent.com/hukl/Smyck-Color-Scheme/master/Smyck.terminal -O ~/setup_tmp/smyck.terminal`
 `open ~/setup_tmp/smyck.terminal`
+
+# configure git
+`git config --global push.default simple`
+`git config --global user.name "Jeff Meyers"`
+`git config --global user.email "jeffreym.meyers@gmail.com"`

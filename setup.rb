@@ -1,7 +1,7 @@
 def log(msg)
-	puts '='*100
-	puts msg
-	puts '='*100
+  puts '='*100
+  puts msg
+  puts '='*100
 end
 
 # create and navigate to setup tmp dir
@@ -59,8 +59,8 @@ log 'Installing pathogen...'
 # install vim plugins
 log 'Installing vim plugins...'
 plugins = [
-	'https://github.com/kien/ctrlp.vim.git',
-	'https://github.com/scrooloose/nerdtree.git'
+  'https://github.com/kien/ctrlp.vim.git',
+  'https://github.com/scrooloose/nerdtree.git'
 ]
 plugins.each do |plugin|
   log "Installing #{plugin}..."

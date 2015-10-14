@@ -7,6 +7,8 @@ set hlsearch
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set list
+set listchars=tab:▸\ ,trail:▫,eol:¬
 
 let mapleader = ","
 map <Leader>f :CtrlP<CR>

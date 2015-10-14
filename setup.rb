@@ -30,14 +30,14 @@ log 'Installing cask utilities...'
 `brew cask install virtualbox vagrant appcleaner coconutbattery`
 
 # set up node
-log 'Setting up NodeJS...'
-`mkdir -p ~/.nvm`
-`cp $(brew --prefix nvm)/nvm-exec ~/.nvm/`
-`echo 'export NVM_DIR=~/.nvm' >> ~/.zshrc`
-`echo 'source $(brew --prefix nvm)/nvm.sh' >> ~/.zshrc`
-`source ~/.zshrc`
-`nvm install stable`
-`nvm use stable`
+#log 'Setting up NodeJS...'
+#`mkdir -p ~/.nvm`
+#`cp $(brew --prefix nvm)/nvm-exec ~/.nvm/`
+#`echo 'export NVM_DIR=~/.nvm' >> ~/.zshrc`
+#`echo 'source $(brew --prefix nvm)/nvm.sh' >> ~/.zshrc`
+#`source ~/.zshrc`
+#`nvm install stable`
+#`nvm use stable`
 
 # install rbenv
 log 'Installing rbenv...'
@@ -54,7 +54,6 @@ log 'Installing ruby...'
 # install pathogen
 log 'Installing pathogen...'
 `mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim`
-`echo 'execute pathogen#infect()' >> ~/.vimrc`
 
 # install vim plugins
 log 'Installing vim plugins...'
@@ -78,3 +77,6 @@ log 'Installing SMYCK color theme...'
 `git config --global push.default simple`
 `git config --global user.name "Jeff Meyers"`
 `git config --global user.email "jeffreym.meyers@gmail.com"`
+
+# set up vimrc
+`wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/.vimrc -O ~/.vimrc`

@@ -1,5 +1,6 @@
 execute pathogen#infect()
 syntax on
+colorscheme smyck
 set number
 set incsearch
 set hlsearch

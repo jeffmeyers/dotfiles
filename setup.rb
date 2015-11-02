@@ -80,3 +80,8 @@ log 'Installing SMYCK color theme...'
 
 # set up vimrc
 `wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/.vimrc -O ~/.vimrc`
+
+# set up vim temp dirs
+log 'Setting up vim backup and temp directories...'
+`mkdir -p ~/.vim/backups`
+`mkdir -p ~/.vim/tmp`

@@ -33,18 +33,12 @@ log 'Installing cask utilities...'
 #log 'Setting up NodeJS...'
 #`mkdir -p ~/.nvm`
 #`cp $(brew --prefix nvm)/nvm-exec ~/.nvm/`
-#`echo 'export NVM_DIR=~/.nvm' >> ~/.zshrc`
-#`echo 'source $(brew --prefix nvm)/nvm.sh' >> ~/.zshrc`
-#`source ~/.zshrc`
 #`nvm install stable`
 #`nvm use stable`
 
 # install rbenv
 log 'Installing rbenv...'
 `git clone https://github.com/sstephenson/rbenv.git ~/.rbenv`
-`echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc`
-`echo 'eval "$(rbenv init -)"' >> ~/.zshrc`
-`source ~/.zshrc`
 `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`
 
 # install ruby
@@ -82,9 +76,18 @@ log 'Installing SMYCK color theme...'
 `git config --global user.email "jeffreym.meyers@gmail.com"`
 
 # set up vimrc
+log 'Copying vimrc...'
 `wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/.vimrc -O ~/.vimrc`
+
+# set up zshrc
+log 'Copying zshrc...'
+`wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/.zshrc -O ~/.zshrc`
 
 # set up vim temp dirs
 log 'Setting up vim backup and temp directories...'
 `mkdir -p ~/.vim/backups`
 `mkdir -p ~/.vim/tmp`
+
+# reload zshell config
+log 'Reloading zsh config...'
+`source ~/.zshrc`

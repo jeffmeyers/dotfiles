@@ -59,7 +59,10 @@ log 'Installing pathogen...'
 log 'Installing vim plugins...'
 plugins = [
   'https://github.com/kien/ctrlp.vim.git',
-  'https://github.com/scrooloose/nerdtree.git'
+  'https://github.com/scrooloose/nerdtree.git',
+  'https://github.com/thoughtbot/vim-rspec.git',
+  'https://github.com/scrooloose/nerdcommenter.git',
+  'https://github.com/scrooloose/syntastic.git'
 ]
 plugins.each do |plugin|
   log "Installing #{plugin}..."

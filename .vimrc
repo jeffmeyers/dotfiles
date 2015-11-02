@@ -9,6 +9,9 @@ set tabstop=2
 set shiftwidth=2
 set list
 set listchars=tab:▸\ ,trail:▫,eol:¬
+set backup
+set backupdir=~/.vim/backups
+set directory=~/.vim/tmp
 
 let mapleader = ","
 map <Leader>f :CtrlP<CR>
@@ -17,9 +20,16 @@ map <Tab> :NERDTreeToggle<CR>
 map <C-t> :tabnew<CR>
 map <C-k> :tabn<CR>
 map <C-j> :tabp<CR>
-map <C-x> :tabclose<CR>
+map <C-x> :wq<CR>
+map <C-f> :NERDTreeFind<CR>
 
 " open quickbuf results in a new tab
 set switchbuf+=newtab
 
 filetype plugin indent on
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>

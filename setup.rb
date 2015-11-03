@@ -83,6 +83,10 @@ log 'Copying vimrc...'
 log 'Copying zshrc...'
 `wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/.zshrc -O ~/.zshrc`
 
+# set up tmux
+log 'Copying tmux...'
+`wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/.tmux.conf -O ~/.tmux.conf`
+
 # set up vim temp dirs
 log 'Setting up vim backup and temp directories...'
 `mkdir -p ~/.vim/backups`

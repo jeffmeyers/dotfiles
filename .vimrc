@@ -29,6 +29,7 @@ set switchbuf+=newtab
 filetype plugin indent on
 
 " RSpec.vim mappings
+let g:rspec_command = "!bundle exec rspec --color {spec}"
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>

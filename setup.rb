@@ -63,12 +63,12 @@ plugins.each do |plugin|
   %x{ cd ~/.vim/bundle && git clone #{plugin} && cd - }
 end
 
-# install smyck
-log 'Installing SMYCK color theme...'
+# install tomorrow-night
+log 'Installing Tomorrow-Night color theme...'
 `mkdir -p ~/.vim/colors`
-`wget https://raw.githubusercontent.com/hukl/Smyck-Color-Scheme/master/smyck.vim -O ~/.vim/colors/smyck.vim`
-`wget https://raw.githubusercontent.com/hukl/Smyck-Color-Scheme/master/Smyck.terminal -O ~/setup_tmp/smyck.terminal`
-`open ~/setup_tmp/smyck.terminal`
+`wget https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night.vim -O ~/.vim/colors/Tomorrow-Night.vim`
+`wget https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/OS%20X%20Terminal/Tomorrow%20Night.terminal -O ~/setup_tmp/Tomorrow-Night.terminal`
+`open ~/setup_tmp/Tomorrow-Night.terminal`
 
 # configure git
 `git config --global push.default simple`

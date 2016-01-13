@@ -56,7 +56,10 @@ plugins = [
   'https://github.com/scrooloose/nerdtree.git',
   'https://github.com/thoughtbot/vim-rspec.git',
   'https://github.com/scrooloose/nerdcommenter.git',
-  'https://github.com/scrooloose/syntastic.git'
+  'https://github.com/scrooloose/syntastic.git',
+  'https://github.com/tpope/vim-endwise.git',
+  'https://github.com/tpope/vim-surround.git',
+  'https://github.com/tpope/vim-fugitive.git'
 ]
 plugins.each do |plugin|
   log "Installing #{plugin}..."

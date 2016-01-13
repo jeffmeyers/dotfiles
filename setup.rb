@@ -23,7 +23,7 @@ log 'Installing Cask...'
 
 # install basic utilities
 log 'Installing basic utilities...'
-`brew install git htop vim tree tmux wget ack nvm postgresql`
+`brew install git htop vim tree tmux wget ack nvm postgresql reattach-to-user-namespace`
 
 # install cask utilities
 log 'Installing cask utilities...'

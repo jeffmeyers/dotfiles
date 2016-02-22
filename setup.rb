@@ -59,7 +59,9 @@ plugins = [
   'https://github.com/scrooloose/syntastic.git',
   'https://github.com/tpope/vim-endwise.git',
   'https://github.com/tpope/vim-surround.git',
-  'https://github.com/tpope/vim-fugitive.git'
+  'https://github.com/tpope/vim-fugitive.git',
+  'https://github.com/pangloss/vim-javascript.git',
+  'https://github.com/mxw/vim-jsx.git'
 ]
 plugins.each do |plugin|
   log "Installing #{plugin}..."

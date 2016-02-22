@@ -34,3 +34,6 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+au BufNewFile,BufRead *.es6 set filetype=javascript.jsx
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files

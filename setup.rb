@@ -23,18 +23,18 @@ log 'Installing Cask...'
 
 # install basic utilities
 log 'Installing basic utilities...'
-`brew install git htop vim tree tmux wget ack nvm postgresql reattach-to-user-namespace`
+`brew install git htop vim tree tmux wget ack nvm postgresql reattach-to-user-namespace --verbose`
 
 # install cask utilities
 log 'Installing cask utilities...'
-`brew cask install virtualbox vagrant appcleaner coconutbattery`
+`brew cask install virtualbox vagrant appcleaner coconutbattery --verbose`
 
 # set up node
-#log 'Setting up NodeJS...'
-#`mkdir -p ~/.nvm`
-#`cp $(brew --prefix nvm)/nvm-exec ~/.nvm/`
-#`nvm install stable`
-#`nvm use stable`
+log 'Setting up NodeJS...'
+`mkdir -p ~/.nvm`
+`cp $(brew --prefix nvm)/nvm-exec ~/.nvm/`
+`nvm install stable`
+`nvm use stable`
 
 # install rbenv
 log 'Installing rbenv...'
@@ -80,15 +80,15 @@ log 'Installing Tomorrow-Night color theme...'
 
 # set up vimrc
 log 'Copying vimrc...'
-`wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/.vimrc -O ~/.vimrc`
+`wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/vimrc -O ~/.vimrc`
 
 # set up zshrc
 log 'Copying zshrc...'
-`wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/.zshrc -O ~/.zshrc`
+`wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/zshrc -O ~/.zshrc`
 
 # set up tmux
 log 'Copying tmux...'
-`wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/.tmux.conf -O ~/.tmux.conf`
+`wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/tmux.conf -O ~/.tmux.conf`
 
 # set up vim temp dirs
 log 'Setting up vim backup and temp directories...'

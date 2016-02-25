@@ -3,6 +3,7 @@ ZSH_THEME="eastwood"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"

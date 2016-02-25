@@ -15,3 +15,4 @@ source $(brew --prefix nvm)/nvm.sh
 # aliases
 alias w='cd ~/working'
 alias ls='ls -al'
+alias bake='bundle exec rake'

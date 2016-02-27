@@ -1,6 +1,7 @@
 export ZSH=/Users/jeff/.oh-my-zsh
 ZSH_THEME="eastwood"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export DISABLE_AUTO_TITLE=true
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 

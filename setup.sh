@@ -34,7 +34,7 @@ rbenv install -s 2.1.2
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 install vim plugins
-for plugin in https://github.com/kien/ctrlp.vim.git https://github.com/scrooloose/nerdtree.git https://github.com/thoughtbot/vim-rspec.git https://github.com/scrooloose/nerdcommenter.git https://github.com/scrooloose/syntastic.git https://github.com/tpope/vim-endwise.git https://github.com/tpope/vim-surround.git https://github.com/tpope/vim-fugitive.git
+for plugin in https://github.com/kien/ctrlp.vim.git https://github.com/scrooloose/nerdtree.git https://github.com/thoughtbot/vim-rspec.git https://github.com/scrooloose/nerdcommenter.git https://github.com/scrooloose/syntastic.git https://github.com/tpope/vim-endwise.git https://github.com/tpope/vim-surround.git https://github.com/tpope/vim-fugitive.git https://github.com/isRuslan/vim-es6
 do
   cd ~/.vim/bundle && git clone $plugin && cd -
 done

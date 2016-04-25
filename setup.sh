@@ -61,5 +61,14 @@ wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/gitconfig -O
 mkdir -p ~/.vim/backups
 mkdir -p ~/.vim/tmp
 
+# install liberation mono
+cd ~/tmp
+wget 'https://www.dropbox.com/s/3gj31xg3z5kcvhi/liberation-mono.zip?dl=0' -O lib.zip
+unzip -o lib.zip
+open LiberationMono-Bold.ttf
+open LiberationMono-BoldItalic.ttf
+open LiberationMono-Italic.ttf
+open LiberationMono-Regular.ttf
+
 # reload zshell config
 source ~/.zshrc

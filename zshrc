@@ -17,3 +17,4 @@ source $(brew --prefix nvm)/nvm.sh
 alias w='cd ~/working'
 alias ls='ls -al'
 alias bake='bundle exec rake'
+alias gp='git pull'

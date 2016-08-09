@@ -12,6 +12,7 @@ set listchars=tab:▸\ ,trail:▫,eol:¬
 set backup
 set backupdir=~/.vim/backups
 set directory=~/.vim/tmp
+set backspace=indent,eol,start
 
 let mapleader = ","
 map <Leader>f :CtrlP<CR>

@@ -28,12 +28,22 @@ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 # install ruby
-rbenv install -s 2.1.2
+rbenv install -s 2.2.5
+
+# set global ruby
+rbenv global 2.2.5
+
+# install tmuxinator
+gem install tmuxinator
+
+# copy tmuxinator config
+mkdir ~/.tmuxinator
+wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/tmuxinator_default.yml -O ~/.tmuxinator/default.yml
 
 # install pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-install vim plugins
+# install vim plugins
 for plugin in https://github.com/kien/ctrlp.vim.git https://github.com/scrooloose/nerdtree.git https://github.com/thoughtbot/vim-rspec.git https://github.com/scrooloose/nerdcommenter.git https://github.com/scrooloose/syntastic.git https://github.com/tpope/vim-endwise.git https://github.com/tpope/vim-surround.git https://github.com/tpope/vim-fugitive.git https://github.com/isRuslan/vim-es6
 do
   cd ~/.vim/bundle && git clone $plugin && cd -

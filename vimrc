@@ -18,7 +18,7 @@ set directory=~/.vim/tmp
 set backspace=indent,eol,start
 
 let mapleader = ","
-map <Leader>p :CtrlP<CR>
+map <Leader>p :FZF<CR>
 map <Leader>b :CtrlPBuffer<CR>
 map <Tab> :NERDTreeToggle<CR>
 map <C-t> :tabnew<CR>
@@ -76,3 +76,6 @@ nnoremap ,gg :Ag ""<left>
 
 "Grep for usages of the current file
 nnoremap ,gcf :exec "Ag " . expand("%:t:r")<CR>
+
+"FZF
+set rtp+=/usr/local/opt/fzf

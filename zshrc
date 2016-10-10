@@ -18,3 +18,6 @@ alias w='cd ~/working'
 alias ls='ls -al'
 alias bake='bundle exec rake'
 alias gp='git pull'
+
+# use ag -g for fzf searches
+export FZF_DEFAULT_COMMAND='ag -g ""'

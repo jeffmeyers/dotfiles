@@ -21,3 +21,6 @@ alias gp='git pull'
 
 # use ag -g for fzf searches
 export FZF_DEFAULT_COMMAND='ag -g ""'
+
+export EDITOR=nvim
+alias vim=nvim

@@ -14,7 +14,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install caskroom/cask/brew-cask
 
 # install basic utilities
-brew install git htop vim tree tmux wget ack nvm postgresql reattach-to-user-namespace fzf neovim/neovim/neovim --verbose
+brew install git htop vim tree wget ag nvm postgresql fzf neovim/neovim/neovim --verbose
 
 # install fzf shell extensions
 /usr/local/opt/fzf/install --all

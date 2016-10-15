@@ -31,10 +31,10 @@ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 # install ruby
-rbenv install -s 2.2.5
+rbenv install -s 2.3.1
 
 # set global ruby
-rbenv global 2.2.5
+rbenv global 2.3.1
 
 # install vim-plug
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \

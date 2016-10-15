@@ -1,6 +1,14 @@
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'neomake/neomake'
+call plug#end()
+
 syntax on
-colorscheme Tomorrow-Night
+colorscheme solarized
 set background=dark
 let g:ctrlp_max_files=0
 set wildignore+=*/.git/*,*/node_modules/*,*/vendor
@@ -12,9 +20,8 @@ set tabstop=2
 set shiftwidth=2
 set list
 set listchars=tab:▸\ ,trail:▫,eol:¬
-set backup
-set backupdir=~/.vim/backups
-set directory=~/.vim/tmp
+set nobackup
+set nowritebackup
 set backspace=indent,eol,start
 
 let mapleader = ","

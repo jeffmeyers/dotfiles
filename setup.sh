@@ -14,7 +14,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install caskroom/cask/brew-cask
 
 # install basic utilities
-brew install git htop vim tree wget ag nvm postgresql fzf neovim/neovim/neovim --verbose
+brew install git htop tmux vim tree wget ag nvm postgresql fzf neovim/neovim/neovim --verbose
 
 # install fzf shell extensions
 /usr/local/opt/fzf/install --all
@@ -49,6 +49,9 @@ wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/zshrc -O ~/.
 
 # set up git
 wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/gitconfig -O ~/.gitconfig
+
+# set up tmux
+wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/tmux.conf -O ~/.tmux
 
 # reload zshell config
 source ~/.zshrc

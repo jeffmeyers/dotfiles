@@ -23,6 +23,7 @@ set listchars=tab:▸\ ,trail:▫,eol:¬
 set nobackup
 set nowritebackup
 set backspace=indent,eol,start
+set clipboard=unnamedplus
 
 let mapleader = ","
 map <Leader>p :FZF<CR>

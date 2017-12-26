@@ -32,7 +32,7 @@ set mouse=a
 
 let mapleader = ","
 map <Leader>p :FZF<CR>
-map <Leader>b :CtrlPBuffer<CR>
+map <Leader>b :Buffers<CR>
 map <Tab> :NERDTreeToggle<CR>
 map <C-t> :tabnew<CR>
 map <C-k> :tabn<CR>

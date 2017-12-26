@@ -24,3 +24,5 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 
 export EDITOR=nvim
 alias vim=nvim
+
+cdpath=(~/dev)

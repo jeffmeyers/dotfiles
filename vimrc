@@ -5,6 +5,10 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'neomake/neomake'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'dracula/vim'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 syntax on
@@ -24,6 +28,7 @@ set nobackup
 set nowritebackup
 set backspace=indent,eol,start
 set clipboard=unnamedplus
+set mouse=a
 
 let mapleader = ","
 map <Leader>p :FZF<CR>
@@ -53,3 +58,8 @@ nnoremap <silent> ,f <C-]>
 
 "FZF
 set rtp+=/usr/local/opt/fzf
+
+let g:lightline = {
+  \ 'colorscheme': 'Dracula',
+  \ }
+

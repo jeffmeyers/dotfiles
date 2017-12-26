@@ -42,16 +42,16 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 
 # set up vimrc
 mkdir -p ~/.config/nvim
-wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/vimrc -O ~/.config/nvim/init.vim
+wget https://raw.githubusercontent.com/jeffmeyers/dotfiles/master/vimrc -O ~/.config/nvim/init.vim
 
 # set up zshrc
-wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/zshrc -O ~/.zshrc
+wget https://raw.githubusercontent.com/jeffmeyers/dotfiles/master/zshrc -O ~/.zshrc
 
 # set up git
-wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/gitconfig -O ~/.gitconfig
+wget https://raw.githubusercontent.com/jeffmeyers/dotfiles/master/gitconfig -O ~/.gitconfig
 
 # set up tmux
-wget https://raw.githubusercontent.com/jeffthespasm/dotfiles/master/tmux.conf -O ~/.tmux
+wget https://raw.githubusercontent.com/jeffmeyers/dotfiles/master/tmux.conf -O ~/.tmux
 
 # reload zshell config
 source ~/.zshrc

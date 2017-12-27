@@ -48,9 +48,6 @@ map <C-f> :NERDTreeFind<CR>
 " use ag when searching
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" open quickbuf results in a new tab
-set switchbuf+=newtab
-
 filetype plugin indent on
 
 " RSpec.vim mappings

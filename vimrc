@@ -1,14 +1,17 @@
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
-Plug 'neomake/neomake'
 Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
 Plug 'dracula/vim'
+Plug 'fatih/vim-go'
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'kassio/neoterm'
+Plug 'mileszs/ack.vim'
+Plug 'neomake/neomake'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 syntax on
@@ -31,6 +34,8 @@ set clipboard=unnamedplus
 set mouse=a
 
 let mapleader = ","
+map <Leader>gg :Ack!<Space>
+map <Leader>gc :Ack!<C-R><C-W><CR>
 map <Leader>p :FZF<CR>
 map <Leader>b :Buffers<CR>
 map <Tab> :NERDTreeToggle<CR>
@@ -39,6 +44,9 @@ map <C-k> :tabn<CR>
 map <C-j> :tabp<CR>
 map <C-x> :wq<CR>
 map <C-f> :NERDTreeFind<CR>
+
+" use ag when searching
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " open quickbuf results in a new tab
 set switchbuf+=newtab

@@ -38,6 +38,7 @@ map <Leader>gg :Ack!<Space>
 map <Leader>gc :Ack!<C-R><C-W><CR>
 map <Leader>p :FZF<CR>
 map <Leader>b :Buffers<CR>
+map <Leader>rb :terminal irb<CR>
 map <Tab> :NERDTreeToggle<CR>
 map <C-t> :tabnew<CR>
 map <C-k> :tabn<CR>

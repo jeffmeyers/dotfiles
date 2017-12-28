@@ -6,6 +6,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'kassio/neoterm'
 Plug 'mileszs/ack.vim'
+Plug 'mklabs/split-term.vim'
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -39,6 +40,7 @@ map <Leader>gc :Ack!<C-R><C-W><CR>
 map <Leader>p :FZF<CR>
 map <Leader>b :Buffers<CR>
 map <Leader>rb :terminal irb<CR>
+map <Leader>tt :VTerm<CR>
 map <Tab> :NERDTreeToggle<CR>
 map <C-t> :tabnew<CR>
 map <C-k> :tabn<CR>

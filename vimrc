@@ -71,3 +71,7 @@ let g:lightline = {
   \ 'colorscheme': 'Dracula',
   \ }
 
+" do not nest nvim in terminal emulation
+if has('nvim')
+  let $VISUAL = 'nvr -cc split --remote-wait'
+endif

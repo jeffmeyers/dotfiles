@@ -13,6 +13,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 syntax on
@@ -68,7 +69,7 @@ nnoremap <silent> ,f <C-]>
 set rtp+=/usr/local/opt/fzf
 
 let g:lightline = {
-  \ 'colorscheme': 'Dracula',
+  \ 'colorscheme': 'solarized',
   \ }
 
 " do not nest nvim in terminal emulation

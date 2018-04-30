@@ -16,6 +16,9 @@ Plug 'tpope/vim-surround'
 Plug 'altercation/vim-colors-solarized'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
+Plug 'mhartington/nvim-typescript', {'for': 'typescript', 'do': ':UpdateRemotePlugins'}
 call plug#end()
 
 syntax on
@@ -50,6 +53,8 @@ map <C-k> :tabn<CR>
 map <C-j> :tabp<CR>
 map <C-x> :wq<CR>
 map <C-f> :NERDTreeFind<CR>
+nmap ,cs :let @*=expand("%")<CR>
+nmap ,cl :let @*=expand("%:p")<CR>
 
 " use ag when searching
 let g:ackprg = 'ag --nogroup --nocolor --column'

@@ -13,3 +13,7 @@
 	unstage = reset HEAD --
 [push]
 	default = matching
+[pager]
+	diff = false
+[core]
+	pager = cat

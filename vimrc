@@ -19,10 +19,14 @@ Plug 'mxw/vim-jsx'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 Plug 'mhartington/nvim-typescript', {'for': 'typescript', 'do': ':UpdateRemotePlugins'}
+Plug 'ayu-theme/ayu-vim'
+Plug 'yarisgutierrez/ayu-lightline'
 call plug#end()
 
 syntax on
-colorscheme solarized
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
 set background=dark
 let g:ctrlp_max_files=0
 set wildignore+=*/.git/*,*/node_modules/*,*/vendor
@@ -76,7 +80,7 @@ nnoremap <silent> ,f <C-]>
 set rtp+=/usr/local/opt/fzf
 
 let g:lightline = {
-  \ 'colorscheme': 'solarized',
+  \ 'colorscheme': 'ayu',
   \ }
 
 " do not nest nvim in terminal emulation

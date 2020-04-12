@@ -1,3 +1,13 @@
+call plug#begin()
+Plug 'junegunn/fzf.vim'
+call plug#end()
+
+" detect indent rules based on filetype
+filetype plugin indent on
+
+" enable fzf
+set rtp+=/usr/local/opt/fzf
+
 " show line numbers
 set number
 
@@ -19,8 +29,20 @@ set hlsearch
 " open new splits to the right
 set splitright
 
+" highlight corresponding bracket/paren
+set showmatch
+
 " enable syntax highlighting
 syntax on
 
 " recommended by the docs, yank to end of line
 map Y y$
+
+" map leader to ,
+let mapleader = ","
+
+" ,t to fuzzy finder
+map <Leader>t :GitFiles<CR>
+
+" ,b to fuzzy buffers
+map <Leader>b :Buffers<CR>

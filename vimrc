@@ -60,3 +60,7 @@ map <Leader>t :GitFiles<CR>
 
 " ,b to fuzzy buffers
 map <Leader>b :Buffers<CR>
+
+" navigate correctly across wrapped lines
+nmap j gj
+nmap k gk

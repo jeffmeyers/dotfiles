@@ -56,7 +56,7 @@ map Y y$
 let mapleader = ","
 
 " ,t to fuzzy finder
-map <Leader>t :GitFiles<CR>
+map <Leader>t :GitFiles -o<CR>
 
 " ,b to fuzzy buffers
 map <Leader>b :Buffers<CR>

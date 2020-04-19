@@ -7,6 +7,7 @@ Plug 'tpope/vim-surround'
 Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 " detect indent rules based on filetype

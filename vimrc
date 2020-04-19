@@ -3,8 +3,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-surround'
 Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'tpope/vim-rails'
 call plug#end()
 
 " detect indent rules based on filetype
@@ -55,8 +57,11 @@ map Y y$
 " map leader to ,
 let mapleader = ","
 
+" ignore gitignore in fuzzy
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
 " ,t to fuzzy finder
-map <Leader>t :GitFiles -o<CR>
+map <Leader>t :Files<CR>
 
 " ,b to fuzzy buffers
 map <Leader>b :Buffers<CR>

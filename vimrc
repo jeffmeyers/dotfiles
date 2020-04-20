@@ -8,7 +8,11 @@ Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-commentary'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
+
+" equalize split sizes when resized
+au VimResized * :wincmd =
 
 " detect indent rules based on filetype
 filetype plugin indent on

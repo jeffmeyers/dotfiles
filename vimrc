@@ -9,6 +9,8 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-dispatch'
+Plug 'thoughtbot/vim-rspec'
 call plug#end()
 
 " equalize split sizes when resized
@@ -66,7 +68,7 @@ let mapleader = ","
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " ,t to fuzzy finder
-map <Leader>t :Files<CR>
+map <Leader>f :Files<CR>
 
 " ,b to fuzzy buffers
 map <Leader>b :Buffers<CR>
@@ -74,3 +76,10 @@ map <Leader>b :Buffers<CR>
 " navigate correctly across wrapped lines
 nmap j gj
 nmap k gk
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = "Dispatch bin/rspec {spec}"

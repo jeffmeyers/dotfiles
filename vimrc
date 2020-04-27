@@ -83,3 +83,6 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = "Dispatch bin/rspec {spec}"
+
+" toggle buffers with space
+noremap <Space> :b#<CR>

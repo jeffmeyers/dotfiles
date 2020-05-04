@@ -11,6 +11,7 @@ Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-dispatch'
 Plug 'thoughtbot/vim-rspec'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " equalize split sizes when resized
@@ -86,3 +87,18 @@ let g:rspec_command = "Dispatch bin/rspec {spec}"
 
 " toggle buffers with space
 noremap <Space> :b#<CR>
+
+" 80 character line
+" set colorcolumn=80
+" highlight ColorColumn ctermbg=7
+
+" ale config
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'javascriptreact': ['prettier'],
+\   'typescript': ['prettier'],
+\   'typescriptreact': ['prettier'],
+\   'css': ['prettier'],
+\}
+let g:ale_linters_explicit = 1 " only run explicitly configured linters
+let g:ale_fix_on_save = 1

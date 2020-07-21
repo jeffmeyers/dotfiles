@@ -12,6 +12,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-dispatch'
 Plug 'thoughtbot/vim-rspec'
 Plug 'dense-analysis/ale'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " equalize split sizes when resized

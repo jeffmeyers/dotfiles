@@ -13,7 +13,10 @@ Plug 'tpope/vim-dispatch'
 Plug 'thoughtbot/vim-rspec'
 Plug 'dense-analysis/ale'
 Plug 'mattn/emmet-vim'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
+
+colorscheme solarized
 
 " equalize split sizes when resized
 au VimResized * :wincmd =

@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -26,6 +27,10 @@ filetype plugin indent on
 
 " no swapfiles
 set noswapfile
+
+" enable undo file
+set undodir=~/.vim/undo-dir
+set undofile
 
 " enable fzf
 set rtp+=/usr/local/opt/fzf

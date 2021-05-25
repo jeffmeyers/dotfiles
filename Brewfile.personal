@@ -1,2 +1,4 @@
+brew "youtube-dl"
+
 cask "skype"
 cask "dropbox"

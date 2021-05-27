@@ -1,6 +1,8 @@
 brew "ag"
 brew "fzf"
 brew "go"
+tap "heroku/brew"
+brew "heroku"
 brew "jq"
 brew "nodenv"
 brew "overmind"

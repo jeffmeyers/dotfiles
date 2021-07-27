@@ -15,6 +15,9 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'dense-analysis/ale'
 Plug 'mattn/emmet-vim'
 Plug 'altercation/vim-colors-solarized'
+Plug 'git@github.com:slim-template/vim-slim.git'
+Plug 'vim-utils/vim-ruby-fold'
+Plug 'posva/vim-vue'
 call plug#end()
 
 colorscheme solarized
@@ -80,6 +83,13 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 " ,t to fuzzy finder
 map <Leader>f :Files<CR>
 
+" ,g to search project
+map <Leader>g :Ag 
+
+" ,ig to search under cursor
+" https://github.com/junegunn/fzf.vim/issues/50#issuecomment-161676378
+map <Leader>ig :Ag <C-R><C-W><CR>
+
 " ,b to fuzzy buffers
 map <Leader>b :Buffers<CR>
 
@@ -111,3 +121,13 @@ let g:ale_fixers = {
 \}
 let g:ale_linters_explicit = 1 " only run explicitly configured linters
 let g:ale_fix_on_save = 1
+
+" NERDTree
+map <C-f> :NERDTreeFind<CR>
+map <C-t> :NERDTreeToggle<CR>
+
+" folds
+set foldlevel=20
+
+" yank file path
+map <C-p> :let @+ = expand("%:p")<CR>

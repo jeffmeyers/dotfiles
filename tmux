@@ -28,7 +28,7 @@ set -g status-fg '#aaaaaa'
 set -g status-left-length 50
 
 # show date/time in right status bar
-set -g status-right "#(date '+%a, %b %d - %I:%M')"
+set -g status-right "#(date '+%a, %b %d - %I:%M') #(cat ~/.thyme-tmux)"
 
 # sane defaults for window splits
 bind-key - split-window -v -c '#{pane_current_path}'
@@ -53,3 +53,18 @@ bind-key -T copy-mode-vi 'y' send -X copy-pipe-and-cancel "reattach-to-user-name
 
 # eliminate escape key lag
 set -s escape-time 0
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Solarized theme
+set -g @plugin 'seebi/tmux-colors-solarized'
+set -g @colors-solarized 'dark'
+
+# Terminal type configuration
+set -g default-terminal "screen-256color"
+set -ga terminal-overrides ",xterm-256color:Tc"
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'

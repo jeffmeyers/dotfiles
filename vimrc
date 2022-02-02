@@ -19,6 +19,10 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'git@github.com:slim-template/vim-slim.git'
 Plug 'vim-utils/vim-ruby-fold'
 Plug 'posva/vim-vue'
+Plug 'cespare/vim-toml'
+Plug 'sheerun/vim-polyglot'
+Plug 'easymotion/vim-easymotion'
+Plug 'diepm/vim-rest-console'
 call plug#end()
 
 colorscheme solarized
@@ -47,6 +51,10 @@ set ts=2
 
 " use 2 spaces for <<
 set sw=2
+
+" display indentation guides
+set listchars=tab:❘-,trail:·,extends:»,precedes:«,nbsp:×
+set list
 
 " expand tabs into spaces
 set expandtab
@@ -81,6 +89,20 @@ let mapleader = ","
 " ignore gitignore in fuzzy
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
+" allow loading fzf results into quickfix
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
+
+" configure fzf actions
+let g:fzf_action = {
+  \ 'ctrl-q': function('s:build_quickfix_list'),
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
 " ,t to fuzzy finder
 map <Leader>f :Files<CR>
 
@@ -103,7 +125,7 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = "Dispatch bin/rspec {spec}"
+let g:rspec_command = "Dispatch dox-do bundle exec rspec {spec}"
 
 " toggle buffers with space
 noremap <Space> :b#<CR>
@@ -132,3 +154,13 @@ set foldlevel=20
 
 " yank file path
 map <C-p> :let @+ = expand("%:p")<CR>
+"
+" tab navigation
+map H gT
+map L gt
+
+" open diffs for all tabs
+ab diffall tabdo Gdiff master<CR>
+
+" always show statusline
+set laststatus=2

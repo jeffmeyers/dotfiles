@@ -10,28 +10,23 @@ Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-commentary'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-dispatch'
-Plug 'thoughtbot/vim-rspec'
-Plug 'dense-analysis/ale'
-Plug 'mattn/emmet-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'git@github.com:slim-template/vim-slim.git'
-Plug 'vim-utils/vim-ruby-fold'
 Plug 'posva/vim-vue'
 Plug 'cespare/vim-toml'
 Plug 'sheerun/vim-polyglot'
-Plug 'easymotion/vim-easymotion'
-Plug 'diepm/vim-rest-console'
+Plug 'mechatroner/rainbow_csv'
 call plug#end()
 
+set background=dark
 colorscheme solarized
 
 " equalize split sizes when resized
 au VimResized * :wincmd =
 
 " detect indent rules based on filetype
-filetype plugin indent on
+" filetype plugin indent on
 
 " no swapfiles
 set noswapfile
@@ -107,7 +102,7 @@ let g:fzf_action = {
 map <Leader>f :Files<CR>
 
 " ,g to search project
-map <Leader>g :Ag 
+map <Leader>g :Ag
 
 " ,ig to search under cursor
 " https://github.com/junegunn/fzf.vim/issues/50#issuecomment-161676378
@@ -120,41 +115,20 @@ map <Leader>b :Buffers<CR>
 nmap j gj
 nmap k gk
 
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = "Dispatch dox-do bundle exec rspec {spec}"
-
 " toggle buffers with space
 noremap <Space> :b#<CR>
-
-" 80 character line
-" set colorcolumn=80
-" highlight ColorColumn ctermbg=7
-
-" ale config
-let g:ale_fixers = {
-\   'javascript': ['prettier'],
-\   'javascriptreact': ['prettier'],
-\   'typescript': ['prettier'],
-\   'typescriptreact': ['prettier'],
-\   'css': ['prettier'],
-\}
-let g:ale_linters_explicit = 1 " only run explicitly configured linters
-let g:ale_fix_on_save = 1
 
 " NERDTree
 map <C-f> :NERDTreeFind<CR>
 map <C-t> :NERDTreeToggle<CR>
 
 " folds
+set foldmethod=indent
 set foldlevel=20
 
 " yank file path
-map <C-p> :let @+ = expand("%:p")<CR>
-"
+map <C-p> :let @+ = expand("%")<CR>
+
 " tab navigation
 map H gT
 map L gt
@@ -164,3 +138,20 @@ ab diffall tabdo Gdiff master<CR>
 
 " always show statusline
 set laststatus=2
+
+" Required for operations modifying multiple buffers like rename.
+set hidden
+
+" switch solarized modes
+map <Leader>td :set background=dark<CR>
+map <Leader>tl :set background=light<CR>
+
+" git shortcuts
+map <Leader>gl :Git pull<CR>
+map <Leader>gp :Git push<CR>
+map <Leader>gc :Git commit -a<CR>
+map <Leader>gco :Git checkout
+map <Leader>gst :Git status<CR>
+map <Leader>gb :Git branch<cr>
+map <Leader>gaa :Git add -A .<cr>
+map <Leader>gd :Git diff<CR>
